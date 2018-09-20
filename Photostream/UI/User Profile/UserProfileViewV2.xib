@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserProfileViewV2" customModule="Pikme" customModuleProvider="target">
+            <connections>
+                <outlet property="avatar" destination="OA9-xJ-cnK" id="aeZ-wj-Ngo"/>
+                <outlet property="btnFollow" destination="P7y-8f-D2A" id="27c-J5-qE8"/>
+                <outlet property="lblAddress" destination="M7A-uS-BvV" id="APC-KI-hh4"/>
+                <outlet property="lblNumberFollowers" destination="gnh-N1-QsI" id="Jf1-1I-Z8Q"/>
+                <outlet property="lblNumberFollowing" destination="zNF-Up-ZhI" id="Kvv-Qy-iz8"/>
+                <outlet property="lblNumberPosts" destination="D0r-Qx-8iA" id="Mgj-jD-3f7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="271"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="OA9-xJ-cnK">
+                    <rect key="frame" x="145" y="20" width="85" height="85"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="85" id="9qZ-5f-AZu"/>
+                        <constraint firstAttribute="height" constant="85" id="EOC-nj-yI1"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="42.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7y-8f-D2A">
+                    <rect key="frame" x="40" y="42" width="41" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="i8f-hR-ZEs"/>
+                        <constraint firstAttribute="width" constant="41" id="x7s-Rb-e0g"/>
+                    </constraints>
+                    <state key="normal" image="follow_bt"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfX-cc-Vng">
+                    <rect key="frame" x="89" y="130" width="197" height="51"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Việt Nam" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7A-uS-BvV">
+                            <rect key="frame" x="0.0" y="0.0" width="199" height="51"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="address" translatesAutoresizingMaskIntoConstraints="NO" id="bnh-15-p1G">
+                            <rect key="frame" x="30" y="19" width="8.5" height="12"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="51" id="Nrj-DM-IV2"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="340 followers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnh-N1-QsI">
+                    <rect key="frame" x="40" y="204" width="57" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="65" id="Heh-w7-zzH"/>
+                        <constraint firstAttribute="height" constant="47" id="xKq-vN-UrP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="340 following" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNF-Up-ZhI">
+                    <rect key="frame" x="155" y="204" width="65" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="65" id="HY4-B1-TEe"/>
+                        <constraint firstAttribute="height" constant="47" id="Qc1-x0-ATa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40 posts" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0r-Qx-8iA">
+                    <rect key="frame" x="270" y="204" width="65" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="65" id="W4E-YM-8GM"/>
+                        <constraint firstAttribute="height" constant="47" id="zRG-MA-XNe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2q-jc-Bf3">
+                    <rect key="frame" x="145" y="20" width="85" height="85"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <action selector="actionEditAvatar:" destination="-1" eventType="touchUpInside" id="WVt-ee-i19"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHr-SD-Sxj">
+                    <rect key="frame" x="147" y="194" width="81" height="67"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <action selector="actionFollowing:" destination="-1" eventType="touchUpInside" id="lIE-2c-bao"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFG-ob-dDj">
+                    <rect key="frame" x="16" y="204" width="81" height="67"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <action selector="actionFollower:" destination="-1" eventType="touchUpInside" id="unF-Kf-o03"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.95294117647058818" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dfX-cc-Vng" secondAttribute="trailing" constant="89" id="5Th-Su-ugK"/>
+                <constraint firstItem="dfX-cc-Vng" firstAttribute="top" secondItem="OA9-xJ-cnK" secondAttribute="bottom" constant="25" id="70Q-WY-Nb3"/>
+                <constraint firstItem="gnh-N1-QsI" firstAttribute="top" secondItem="dfX-cc-Vng" secondAttribute="bottom" constant="23" id="Ax3-i1-ptb"/>
+                <constraint firstItem="zNF-Up-ZhI" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Ita-2i-iiJ"/>
+                <constraint firstItem="OA9-xJ-cnK" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="b7o-RM-Zah"/>
+                <constraint firstItem="zNF-Up-ZhI" firstAttribute="top" secondItem="dfX-cc-Vng" secondAttribute="bottom" constant="23" id="bRS-4h-wda"/>
+                <constraint firstItem="P7y-8f-D2A" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="42" id="blm-JB-Asw"/>
+                <constraint firstItem="OA9-xJ-cnK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="c9N-6j-OT0"/>
+                <constraint firstItem="gnh-N1-QsI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="ifC-XS-fvb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="D0r-Qx-8iA" secondAttribute="trailing" constant="40" id="kMZ-Nf-LDz"/>
+                <constraint firstItem="D0r-Qx-8iA" firstAttribute="top" secondItem="dfX-cc-Vng" secondAttribute="bottom" constant="23" id="nY1-vC-Xke"/>
+                <constraint firstItem="dfX-cc-Vng" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="89" id="s5S-TG-VOX"/>
+                <constraint firstItem="P7y-8f-D2A" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="xUr-nW-Tn5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-6.5" y="-112.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="address" width="19" height="24"/>
+        <image name="avatar" width="170" height="170"/>
+        <image name="follow_bt" width="82" height="82"/>
+    </resources>
+</document>

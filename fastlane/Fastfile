@@ -1,0 +1,23 @@
+fastlane_version "1.105.2"
+default_platform :ios
+
+skip_docs
+
+platform :ios do
+
+  lane :beta do |values|
+    cocoapods
+
+    gym(scheme: 'Photostream', export_method: 'development')
+
+    emails = values[:test_email] ? values[:test_email] : ['rinuom91@gmail.com']
+    groups = values[:test_email] ? nil : nil
+
+    crashlytics(api_token: '98aca4b74d3e5d28d01373f849238205c4601674',
+             build_secret: 'd818d00ad11303ea3b2edb87141a8c79c06d628ae5492cc11cb82b5e3f673197',
+                   emails: emails,
+                   groups: groups,
+                    notes: 'Distributed with fastlane',
+            notifications: true)
+  end
+end
